@@ -2,109 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Save Mysuru Trees</title>
-
-  <meta
-    name="description"
-    content="Send an objection email to help protect 137 mature trees in Mysuru from being cut for the proposed BEML Industrial Health Centre."
-  />
-
   <style>
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
-      background: #f5f7f3;
+      padding: 0;
+      padding-bottom: 120px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f7f4;
       color: #1f2937;
-      line-height: 1.6;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 860px;
+      width: 100%;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 20px 16px 80px;
+      padding: 14px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #14532d, #166534);
-      color: white;
-      padding: 32px 22px;
-      border-radius: 24px;
-      margin-top: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      padding: 8px 4px 4px;
     }
 
     .hero h1 {
+      font-size: 32px;
+      line-height: 1.05;
+      letter-spacing: -1px;
       margin: 0 0 12px;
-      font-size: 34px;
-      line-height: 1.1;
-      font-weight: 800;
+      color: #111827;
     }
 
     .hero p {
       margin: 0;
-      font-size: 17px;
-      opacity: 0.95;
+      font-size: 16px;
+      color: #4b5563;
     }
 
     .card {
       background: white;
+      width: 100%;
+      padding: 20px 18px;
       border-radius: 22px;
-      padding: 24px;
-      margin-top: 18px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.05);
+      margin-top: 16px;
     }
 
-    .card h2 {
-      margin-top: 0;
-      color: #14532d;
-      font-size: 24px;
+    h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      letter-spacing: -0.3px;
+      color: #111827;
     }
 
-    .highlight {
-      background: #ecfdf5;
-      border-left: 5px solid #15803d;
-      padding: 16px;
-      border-radius: 14px;
-      margin: 20px 0;
-      font-size: 15px;
-    }
-
-    .deadline {
-      background: #fef3c7;
-      color: #92400e;
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-weight: 700;
-      margin-top: 18px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    .btn-container {
-      position: sticky;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
-      background: rgba(245, 247, 243, 0.96);
-      backdrop-filter: blur(8px);
-      z-index: 999;
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: #4b5563;
+      line-height: 1.6;
     }
 
     .btn {
@@ -112,159 +70,167 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      height: 58px;
       background: #166534;
       color: white;
-      text-decoration: none;
-      padding: 18px 20px;
       border-radius: 18px;
-      font-size: 18px;
-      font-weight: 800;
-      box-shadow: 0 8px 20px rgba(22, 101, 52, 0.25);
-      transition: transform 0.15s ease;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      border: none;
+      transition: 0.2s ease;
+      box-shadow: 0 8px 24px rgba(22,101,52,0.18);
     }
 
-    .btn:active {
-      transform: scale(0.98);
+    .btn:hover {
+      background: #14532d;
+      transform: translateY(-2px);
+    }
+
+    .btn-container {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+      background: rgba(244,247,244,0.96);
+      backdrop-filter: blur(18px);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .cta-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .small {
-      font-size: 14px;
-      color: #6b7280;
-      margin-top: 10px;
       text-align: center;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .highlight {
+      background: #ecfdf5;
+      color: #166534;
+      padding: 14px;
+      border-radius: 16px;
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #374151;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .news-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     .news-links a {
-      display: block;
-      margin-bottom: 12px;
       color: #166534;
       text-decoration: none;
-      font-weight: 600;
-      word-break: break-word;
-    }
-
-    .news-links a:hover {
-      text-decoration: underline;
+      line-height: 1.5;
     }
 
     .footer {
-      margin-top: 28px;
-      text-align: center;
+      margin-top: 24px;
+      font-size: 13px;
       color: #6b7280;
-      font-size: 14px;
-    }
-
-    .tree-count {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .tree-item {
-      background: #f9fafb;
-      border-radius: 14px;
-      padding: 14px;
       text-align: center;
-      border: 1px solid #e5e7eb;
+      padding-bottom: 20px;
     }
-
-    .tree-item strong {
-      display: block;
-      font-size: 20px;
-      color: #166534;
-    }
-
-    @media (max-width: 640px) {
+  @media (max-width: 640px) {
       .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
       }
 
-      .hero p {
-        font-size: 16px;
+      .stat-pill {
+        min-width: 120px;
       }
 
       .card {
-        padding: 20px;
-      }
-
-      .btn {
-        font-size: 17px;
+        border-radius: 20px;
       }
     }
   </style>
 </head>
-
 <body>
+  <style>
+    .stats-strip {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      margin-top: 18px;
+      padding-bottom: 4px;
+    }
+
+    .stat-pill {
+      min-width: 150px;
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      border: 1px solid #e5e7eb;
+      flex-shrink: 0;
+    }
+
+    .stat-pill strong {
+      display: block;
+      font-size: 28px;
+      color: #166534;
+      margin-bottom: 6px;
+    }
+  </style>
+
   <div class="container">
     <div class="hero">
       <h1>🌳 Save 137 Trees in Mysuru</h1>
 
       <p>
-        Help raise your voice against the proposed felling of 137 mature trees
-        in Koorgalli, Mysuru for the BEML Industrial Health Centre project.
+        137 mature trees in Koorgalli, Mysuru may soon be cut down for the proposed BEML Industrial Health Centre project.
       </p>
+
+      <div class="stats-strip">
+        <div class="stat-pill">
+          <strong>137</strong>
+          Trees proposed for felling
+        </div>
+
+        <div class="stat-pill">
+          <strong>May 25</strong>
+          Deadline for public objections
+        </div>
+
+        <div class="stat-pill">
+          <strong>Mysuru</strong>
+          One of Karnataka's greenest cities
+        </div>
+      </div>
     </div>
 
     <div class="card">
       <h2>What is happening?</h2>
 
       <p>
-        Bharat Earth Movers Limited (BEML) has sought permission from the
-        Forest Department to fell <strong>137 trees</strong> for construction
-        of an “Industrial Health Centre” within its premises at Koorgalli
-        village in Yelwal Hobli of Mysuru Taluk.
+        Bharat Earth Movers Limited (BEML) has sought permission from the Forest Department to fell 137 mature trees for construction of an “Industrial Health Centre” within its premises at Koorgalli village in Yelwal Hobli of Mysuru Taluk.
       </p>
 
       <div class="highlight">
-        According to the proposal, the trees include:
-      </div>
-
-      <div class="tree-count">
-        <div class="tree-item">
-          <strong>47</strong>
-          Teak Trees
-        </div>
-
-        <div class="tree-item">
-          <strong>13</strong>
-          Acacia Trees
-        </div>
-
-        <div class="tree-item">
-          <strong>10</strong>
-          Mahogany Trees
-        </div>
-
-        <div class="tree-item">
-          <strong>50</strong>
-          Wild Varieties
-        </div>
-
-        <div class="tree-item">
-          <strong>9</strong>
-          Peltophorum Trees
-        </div>
-
-        <div class="tree-item">
-          <strong>6</strong>
-          Silver Oak Trees
-        </div>
-
-        <div class="tree-item">
-          <strong>1</strong>
-          Orchid Tree
-        </div>
-
-        <div class="tree-item">
-          <strong>1</strong>
-          Honge Tree
-        </div>
-      </div>
-
-      <div class="deadline">
-        ⏰ Citizens can submit objections or suggestions before
-        <strong>5:30 PM on May 25</strong>
+        Citizens can submit objections or suggestions before <strong>5:30 PM on May 25</strong> by email to:
+        <br /><br />
+        <strong>rfomyspublichearing@gmail.com</strong>
       </div>
     </div>
 
@@ -272,52 +238,12 @@
       <h2>Why people are concerned</h2>
 
       <ul>
-        <li>
-          Mature trees provide cooling, groundwater recharge, oxygen generation,
-          carbon absorption and biodiversity support that cannot be replaced for
-          decades.
-        </li>
-
-        <li>
-          Mysuru is already witnessing increasing tree loss and rising urban
-          temperatures.
-        </li>
-
-        <li>
-          The city already has multiple established hospitals and healthcare
-          facilities accessible from the BEML–Koorgalli region.
-        </li>
-
-        <li>
-          Environmental activists have recently raised concerns over several
-          other large-scale tree cutting proposals in Mysuru.
-        </li>
-
-        <li>
-          Once mature tree cover is destroyed, the ecological damage is
-          effectively irreversible for the current generation.
-        </li>
+        <!-- <li>Mature trees cannot be ecologically replaced for decades.</li> -->
+        <li>Mysuru is already witnessing increasing tree loss and rising temperatures.</li>
+        <li>The city already has multiple established hospitals nearby.</li>
+        <li>These trees support biodiversity, cooling, rainwater absorption and air quality.</li>
+        <!-- <li>Citizens are concerned about repeated large-scale tree cutting proposals in Mysuru.</li> -->
       </ul>
-    </div>
-
-    <div class="card">
-      <h2>How you can help</h2>
-
-      <p>
-        Click the button below to open a pre-written objection email addressed
-        to the Forest Department.
-      </p>
-
-      <p>
-        The email will automatically open in your mobile email app or Gmail app.
-        You can review it and press send.
-      </p>
-
-      <div class="highlight">
-        Every email matters. Public objections can influence environmental
-        decision-making and encourage authorities to explore alternatives that
-        preserve green cover.
-      </div>
     </div>
 
     <div class="card">
@@ -348,48 +274,34 @@
     </div>
 
     <div class="card">
-      <h2>Recent tree-cutting concerns in Mysuru</h2>
+      <h2>Take Action</h2>
 
-      <div class="news-links">
-        <a
-          href="https://www.deccanherald.com/india/karnataka/mysuru/analyse-pros-and-cons-before-executing-underpass-project-near-mysurus-kukkarahalli-lake-say-activists-3971306"
-          target="_blank"
-        >
-          Activists raise concerns near Kukkarahalli Lake
-        </a>
+      <p>
+        Click below to open a pre-written objection email addressed to the Forest Department.
+      </p>
 
-        <a
-          href="https://www.deccanherald.com/india/karnataka/mysuru/khandre-revisits-proposal-to-clear-350-trees-at-mysuru-ring-road-junction-directs-officials-to-assess-if-they-can-save-any-3992984"
-          target="_blank"
-        >
-          Proposal involving 350 trees at Mysuru Ring Road junction
-        </a>
-
-        <a
-          href="https://www.thehindu.com/news/national/karnataka/tree-felling-for-nhai-works-in-mysuru-sparks-concern-activist-questions-move/article70946099.ece"
-          target="_blank"
-        >
-          Tree felling for NHAI works sparks concern
-        </a>
+      <div class="highlight">
+        It takes less than 30 seconds. Every email matters.
       </div>
     </div>
 
     <div class="footer">
-      Share this page with friends, family, and local communities to help
-      protect Mysuru’s green cover 🌳
+      Share this page on WhatsApp, Instagram, Reddit, X and local Mysuru groups 🌳
     </div>
   </div>
 
   <div class="btn-container">
-    <a
-      class="btn"
-      href="mailto:rfomyspublichearing@gmail.com?subject=Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore&body=To%0AThe%20Tree%20Officer%20and%20Range%20Forest%20Officer%0AForest%20Bhavan%0AAshokapuram%0AMysuru%20%E2%80%93%20570008%0A%0ASubject%3A%20Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore%0A%0ARespected%20Sir%2FMadam%2C%0A%0AI%20wish%20to%20formally%20submit%20my%20objection%20to%20the%20proposal%20by%20Bharat%20Earth%20Movers%20Limited%20(BEML)%20seeking%20permission%20to%20fell%20137%20trees%20for%20the%20construction%20of%20an%20%E2%80%9CIndustrial%20Health%20Centre%E2%80%9D%20within%20its%20premises%20at%20Koorgalli%20village%2C%20Yelwal%20Hobli%2C%20Mysuru%20Taluk.%0A%0AWhile%20healthcare%20facilities%20are%20important%2C%20the%20large-scale%20removal%20of%20mature%20trees%20in%20an%20environmentally%20sensitive%20and%20rapidly%20urbanising%20region%20like%20Mysuru%20will%20cause%20long-term%20ecological%20damage%20that%20cannot%20be%20adequately%20compensated%20through%20re-plantation%20alone.%0A%0AI%20respectfully%20request%20the%20Forest%20Department%20to%20reconsider%20the%20permission%20for%20mass%20tree%20felling%20and%20explore%20alternatives%20that%20preserve%20existing%20green%20cover.%0A%0ASincerely%2C%0AConcerned%20Citizen%20of%20Mysore"
-    >
-      📧 Send Objection Email
-    </a>
+    <div class="cta-wrapper">
+      <a
+        class="btn"
+        href="mailto:rfomyspublichearing@gmail.com?subject=Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore&body=To%0AThe%20Tree%20Officer%20and%20Range%20Forest%20Officer%0AForest%20Bhavan%0AAshokapuram%0AMysuru%20%E2%80%93%20570008%0A%0ASubject%3A%20Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore%0A%0ARespected%20Sir%2FMadam%2C%0A%0AI%20wish%20to%20formally%20submit%20my%20objection%20to%20the%20proposal%20by%20Bharat%20Earth%20Movers%20Limited%20(BEML)%20seeking%20permission%20to%20fell%20137%20trees.%0A%0AI%20respectfully%20request%20the%20Forest%20Department%20to%20reconsider%20the%20permission%20for%20mass%20tree%20felling%20and%20explore%20alternatives%20that%20preserve%20existing%20green%20cover.%0A%0ASincerely%2C%0AConcerned%20Citizen%20of%20Mysore"
+      >
+        📧 Send Objection Email
+      </a>
 
-    <div class="small">
-      Opens your email app with a pre-written objection email
+      <div class="small">
+        Opens your email app with a pre-written email
+      </div>
     </div>
   </div>
 </body>
