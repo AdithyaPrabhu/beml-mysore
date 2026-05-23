@@ -22,7 +22,7 @@
     body {
       margin: 0;
       padding: 0;
-      padding-bottom: 120px;
+      padding-bottom: 170px;
       width: 100%;
       overflow-x: hidden;
 
@@ -196,6 +196,12 @@
       margin: 0 auto;
     }
 
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .btn {
       display: flex;
       align-items: center;
@@ -224,6 +230,8 @@
       transition:
         transform 0.2s ease,
         background 0.2s ease;
+
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -231,21 +239,40 @@
       transform: translateY(-1px);
     }
 
+    .btn-secondary {
+      background: white;
+      color: #166534;
+      border: 2px solid #166534;
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background: #ecfdf5;
+    }
+
     .small {
-      margin-top: 8px;
+      margin-top: 10px;
 
       text-align: center;
 
-      font-size: 0.75rem;
-      line-height: 1.4;
+      font-size: 0.78rem;
+      line-height: 1.5;
 
       color: #6b7280;
     }
 
-    /* Mobile refinements */
+    .copy-success {
+      display: none;
+      margin-top: 10px;
+      text-align: center;
+      color: #166534;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
     @media (max-width: 640px) {
       body {
-        padding-bottom: 132px;
+        padding-bottom: 190px;
       }
 
       .container {
@@ -267,7 +294,6 @@
       }
     }
 
-    /* Very small phones */
     @media (max-width: 380px) {
       .container {
         padding: 12px;
@@ -391,12 +417,12 @@
       <h2>Take Action</h2>
 
       <p>
-        Click below to open a pre-written objection email addressed to the
-        Forest Department.
+        Tap “Send Objection Email” to open your email app with a pre-written objection letter.
       </p>
 
       <div class="highlight">
-        It takes less than 30 seconds. Every email matters.
+        If the email app does not open correctly or the text appears incomplete,
+        use the “Copy Full Letter” button below and paste it manually into your email app.
       </div>
 
     </div>
@@ -411,20 +437,98 @@
 
     <div class="cta-wrapper">
 
-      <a
-        class="btn"
-        href="mailto:rfomyspublichearing@gmail.com?subject=Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore&body=To%0AThe%20Tree%20Officer%20and%20Range%20Forest%20Officer%0AForest%20Bhavan%0AAshokapuram%0AMysuru%20%E2%80%93%20570008%0A%0ASubject%3A%20Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore%0A%0ARespected%20Sir%2FMadam%2C%0A%0AI%20wish%20to%20formally%20submit%20my%20objection%20to%20the%20proposal%20by%20Bharat%20Earth%20Movers%20Limited%20(BEML)%20seeking%20permission%20to%20fell%20137%20trees%20for%20the%20construction%20of%20an%20Industrial%20Health%20Centre%20within%20its%20premises%20at%20Koorgalli%20village%2C%20Yelwal%20Hobli%2C%20Mysuru%20Taluk.%0A%0AWhile%20healthcare%20facilities%20are%20important%2C%20the%20large-scale%20removal%20of%20mature%20trees%20in%20an%20environmentally%20sensitive%20and%20rapidly%20urbanising%20region%20like%20Mysuru%20will%20cause%20long-term%20ecological%20damage%20that%20cannot%20be%20adequately%20compensated%20through%20re-plantation%20alone.%0A%0AI%20respectfully%20submit%20my%20objection%20and%20request%20the%20Forest%20Department%20to%20reconsider%20the%20permission%20for%20mass%20tree%20felling%20and%20explore%20alternatives%20that%20preserve%20existing%20green%20cover.%0A%0ASincerely%2C%0AConcerned%20Citizen%20of%20Mysore"
-      >
-        📧 Send Objection Email
-      </a>
+      <div class="btn-group">
+
+        <a
+          class="btn"
+          href="mailto:rfomyspublichearing@gmail.com?subject=Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore&body=To%0AThe%20Tree%20Officer%20and%20Range%20Forest%20Officer%0AForest%20Bhavan%0AAshokapuram%0AMysuru%20%E2%80%93%20570008%0A%0ASubject%3A%20Objection%20to%20Proposal%20for%20Felling%20137%20Trees%20for%20BEML%20Industrial%20Health%20Centre%20at%20Koorgalli%2C%20Mysore%0A%0ARespected%20Sir%2FMadam%2C%0A%0AI%20wish%20to%20formally%20submit%20my%20objection%20to%20the%20proposal%20by%20Bharat%20Earth%20Movers%20Limited%20(BEML)%20seeking%20permission%20to%20fell%20137%20trees%20for%20the%20construction%20of%20an%20%E2%80%9CIndustrial%20Health%20Centre%E2%80%9D%20within%20its%20premises%20at%20Koorgalli%20village%2C%20Yelwal%20Hobli%2C%20Mysuru%20Taluk.%0A%0AWhile%20healthcare%20facilities%20are%20important%2C%20the%20large-scale%20removal%20of%20mature%20trees%20in%20an%20environmentally%20sensitive%20and%20rapidly%20urbanising%20region%20like%20Mysuru%20will%20cause%20long-term%20ecological%20damage%20that%20cannot%20be%20adequately%20compensated%20through%20re-plantation%20alone.%0A%0AI%20respectfully%20submit%20my%20objection%20and%20request%20the%20Forest%20Department%20to%20reconsider%20the%20permission%20for%20mass%20tree%20felling%20and%20explore%20alternatives%20that%20preserve%20existing%20green%20cover.%0A%0ASincerely%2C%0AConcerned%20Mysore%20Citizen"
+        >
+          📧 Send Objection Email
+        </a>
+
+        <button class="btn btn-secondary" onclick="copyLetter()">
+          📋 Copy Full Letter
+        </button>
+
+      </div>
 
       <div class="small">
-        Opens Gmail with the objection letter pre-filled
+        The email app button works best on most phones. If your email app does not open correctly or the message appears shortened, use “Copy Full Letter” and paste it manually into Gmail or any email app.
+      </div>
+
+      <div class="copy-success" id="copySuccess">
+        ✅ Full objection letter copied to clipboard
       </div>
 
     </div>
 
   </div>
+
+  <script>
+    const fullLetter = `To
+The Tree Officer and Range Forest Officer
+Forest Bhavan
+Ashokapuram
+Mysuru – 570008
+
+Subject: Objection to Proposal for Felling 137 Trees for BEML Industrial Health Centre at Koorgalli, Mysore
+
+Respected Sir/Madam,
+
+I wish to formally submit my objection to the proposal by Bharat Earth Movers Limited (BEML) seeking permission to fell 137 trees for the construction of an “Industrial Health Centre” within its premises at Koorgalli village, Yelwal Hobli, Mysuru Taluk.
+
+While healthcare facilities are important, the large-scale removal of mature trees in an environmentally sensitive and rapidly urbanising region like Mysuru will cause long-term ecological damage that cannot be adequately compensated through re-plantation alone. The proposal reportedly includes removal of valuable and mature species such as teak, mahogany, silver oak, acacia, orchid, honge, peltophorum, and other wild varieties. Many of these trees are decades old and provide significant ecological services including carbon absorption, cooling effects, rainwater retention, oxygen generation and habitat for birds and pollinators.
+
+I respectfully submit the following concerns:
+
+1. Irreversible Loss of Mature Tree Cover: Compensatory saplings cannot replace the ecological value of mature trees for several decades. Once these trees are removed, the environmental loss is effectively permanent for the current generation.
+
+2. Weak justification for health center construction: The justification for felling 137 mature trees appears weak considering that Mysuru city and surrounding areas already have multiple established hospitals and healthcare facilities, including multi-speciality and emergency care centres accessible from the BEML–Koorgalli region. Major hospitals already serving Mysuru include:
+- Apollo BGS Hospitals
+- Narayana Hospital
+- Manipal Hospital Mysore
+- JSS Hospital, Mysore
+
+3. Increase in Urban Heat and Climate Stress: Mysuru has already been experiencing rising temperatures and loss of green spaces. Removal of 137 trees will worsen local heat conditions and reduce natural cooling in the area.
+
+4. Impact on Biodiversity: These trees support urban biodiversity including birds, butterflies, bees, and small wildlife. Their destruction will disturb the ecological balance of the locality.
+
+5. Rainwater and Groundwater Concerns: Trees play a critical role in rainwater absorption and groundwater recharge. Large-scale tree removal increases runoff, soil degradation, and flooding risk during heavy rainfall.
+
+6. Public Interest and Legal Responsibility: Under the Karnataka Tree Preservation framework and broader environmental principles, tree felling should only be permitted as a last resort after exhausting all alternatives.
+
+Given the existing healthcare ecosystem in Mysuru, the Forest Department should critically evaluate whether destruction of 137 mature trees is genuinely unavoidable for this project.
+
+In view of the above, I respectfully request the Forest Department to:
+- Reject or reconsider the permission sought for felling 137 trees
+- Evaluate if existing nearby hospitals can adequately serve the need
+- Direct BEML to redesign the project to minimise tree loss by considering options like vertical or compact construction
+- Explore alternative non-forested sites within the extensive BEML premises or adjust construction layouts to preserve maximum trees
+- Conduct transparent environmental review and public consultation.
+
+Mysuru is widely known for its greenery and environmental heritage. Protecting existing mature trees is essential for preserving the city’s ecological balance for future generations.
+
+I request the department to act in the larger public and environmental interest.
+
+Sincerely,
+Concerned Mysore Citizen`;
+
+    async function copyLetter() {
+      try {
+        await navigator.clipboard.writeText(fullLetter);
+
+        const success = document.getElementById("copySuccess");
+        success.style.display = "block";
+
+        setTimeout(() => {
+          success.style.display = "none";
+        }, 4000);
+
+      } catch (err) {
+        alert("Unable to copy automatically. Please try again.");
+      }
+    }
+  </script>
 
 </body>
 </html>
